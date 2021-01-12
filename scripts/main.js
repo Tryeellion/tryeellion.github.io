@@ -4,10 +4,22 @@ let myImage = document.querySelector('img');
 
 myImage.onclick = function() {
   let mySrc = myImage.getAttribute('src');
-  if(mySrc === 'images/firefox-icon.png') {
-    myImage.setAttribute ('src','images/firefox2.png');
+  if(mySrc === 'images/1.png') {
+    myImage.setAttribute ('src','images/2.png');
+  } else if (mySrc === 'images/2.png') {
+    myImage.setAttribute ('src','images/3.png');
+  } else if (mySrc === 'images/3.png') {
+    myImage.setAttribute ('src','images/4.png');
+  } else if (mySrc === 'images/4.png') {
+    myImage.setAttribute ('src','images/5.png');
+  } else if (mySrc === 'images/5.png') {
+    myImage.setAttribute ('src','images/6.png');
+  } else if (mySrc === 'images/6.png') {
+    myImage.setAttribute ('src','images/7.png');
+  } else if (mySrc === 'images/7.png') {
+    myImage.setAttribute ('src','images/8.png');
   } else {
-    myImage.setAttribute ('src','images/firefox-icon.png');
+    myImage.setAttribute ('src','images/1.png');
   }
 }
 
@@ -22,7 +34,7 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+    myHeading.innerHTML = 'Web developer newbie, ' + myName;
   }
 }
 
@@ -30,7 +42,7 @@ if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Mozilla is cool, ' + storedName;
+  myHeading.innerHTML = 'Web developer newbie, ' + storedName;
 }
 
 myButton.onclick = function() {
